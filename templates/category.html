@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeopardy</title>
+    <title>Jeopardy - Category</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/output.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/landing.css') }}">
 </head>
 
 <body>
+    <div class="flex flex-col justify-center items-center">
+        <p class="mt-24 font-bold text-3xl mb-12">Your category is {{category}}</p>
 
-    <div class="flex flex-col justify-center items-center mt-12">
-        <p class="font-bold text-3xl mb-12">Welcome to the Jeopardy Helper!</p>
-        <img src="../static/img/jeopardy.jpeg" alt="" style="width: 30em;" class="mb-12">
-        <a href="/randomCategory"><button class="home-button">Click To Start!</button></a>
+        <a href="/questions"><button class="home-button">Click to Start Questions!</button></a>
     </div>
-
 </body>
 
 </html>
