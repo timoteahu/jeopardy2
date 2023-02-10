@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +8,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/output.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/landing.css') }}">
 </head>
-
 <body>
     <div class="flex flex-col justify-center items-center">
-    <p class="font-bold text-xl mt-12 mb-12"> {{value['Question']}}</p>
-    <form action="/submitQuestion">
-        <input type="text" placeholder="Answer" style="border: 1px solid black;" class="mb-12">
-    </form>
-    <a href="/questions/{{id+1}}"><button class="home-button">Next Question</button></a>
+        <p class="mt-24 font-bold text-3xl mt-12 mb-12">You did all of the questions for this category</p>
+        <a href="/"><button class="home-button">Return to Home</button></a>
     </div>
 </body>
-
 </html>

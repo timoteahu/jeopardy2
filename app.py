@@ -8,7 +8,6 @@ app.config['SESSION_TYPE'] = 's e c r e t'
 app.secret_key = 's e c r e t'
 
 questionList = {}
-
 @app.route("/randomCategory")
 def randomCat():
     json_file = "./static/data/jeopardy.json"
@@ -21,7 +20,9 @@ def randomCat():
             questionList[content['Category']] = []
             questionList[content['Category']].append(content)
     vals = random.choice(list(questionList.values()))
-    return render_template("/category.html", category= vals[0]['Category'])
+    session.clear()
+    session["vals"] = vals
+    return render_template("/category.html", category= vals[0]['Category'], questions = vals)
 
 @app.route("/questions")
 def firstQuestion():
@@ -31,8 +32,21 @@ def firstQuestion():
 @app.route("/questions/<id>")
 def questions(id):
     newID = int(id)
-    return render_template("/questions.html")
+    print(len(session["vals"]))
+    if(newID == len(session["vals"])):
+        print("equal!!!")
+        return redirect("/endPage")
+    if(newID >= 5):
+        return redirect("/endPage")
+    return render_template("/questions.html", value=session["vals"][newID], id=newID)
 
+@app.route("/endPage")
+def endPage():
+    return render_template("/endPage.html")
+
+@app.route("/inBetween/<id>")
+def inBetween(id):
+    return render_template("inbetween.html")
 
 @app.route("/")
 def index():
