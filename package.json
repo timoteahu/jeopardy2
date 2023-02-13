@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/timoteahu/jeopardy2/issues"
   },
-  "homepage": "https://github.com/timoteahu/jeopardy2#readme"
+  "homepage": "https://github.com/timoteahu/jeopardy2#readme",
+  "dependencies": {
+    "flask": "^0.2.10"
+  }
 }
