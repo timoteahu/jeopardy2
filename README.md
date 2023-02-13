@@ -23,6 +23,12 @@ JSON & Random module
 
 
 
+Data Structures:
+Map (map categories to questions)
+List (list of questions within the map)
+
+
+
 How to Run:
 - Be inside the main directory (jeopardy2)
 - then run in terminal the following command: python3 app.py
