@@ -33,3 +33,8 @@ How to Run:
 - Be inside the main directory (jeopardy2)
 - then run in terminal the following command: python3 app.py
 - copy the link that it runs on which is your localhost and paste that into your browser and viola
+
+
+OR 
+
+go to this website https://jeopardy2java.herokuapp.com/
