@@ -20,7 +20,7 @@ Flask
 Tailwindcss
 Node/NPM
 JSON & Random module
-
+Gunicorn
 
 
 Data Structures:
