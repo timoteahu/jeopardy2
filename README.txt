@@ -4,7 +4,7 @@ The programs that I created are everything in the templates folder (category.htm
 
 Everything inside of the static folder was either an asset from a different source or a framework that I used to ease the process of creating the website.
 
-Every other file is just used to help launch the server and put it on the internet. 
+Every other file is just used to help launch the server and get the appropriate files for the putting it on the internet. 
 
 
 
