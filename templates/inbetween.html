@@ -1,3 +1,10 @@
+
+<!-- 
+    Timothy Hu
+    This is a web page class that provides confirmation on whether or not the user got a question correct. It also provides a way to go to the next question 
+    after completing the previous question. 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +16,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/landing.css') }}">
 </head>
 <body>
-    <div>
-        YOU GOT IT RIGHT!
+    <div class="flex flex-col justify-center items-center">
+        <p class="font-bold text-xl mt-12 mb-12">{{text}}</p>
+        <p>The answer is: {{answer}}</p>
+        <a href="/questions/{{id+1}}"><button class="home-button">Next Question</button></a>
     </div>
 </body>
 </html>

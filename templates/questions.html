@@ -1,3 +1,10 @@
+<!-- 
+    Timothy Hu
+    This is a web page class that displays the specific questions within a category. This page serves as a way to display all of the questions by changing 
+    the data within the objects generated from this class.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +20,9 @@
 <body>
     <div class="flex flex-col justify-center items-center">
     <p class="font-bold text-xl mt-12 mb-12"> {{value['Question']}}</p>
-    <form action="/submitQuestion">
-        <input type="text" placeholder="Answer" style="border: 1px solid black;" class="mb-12">
+    <form action="/submitQuestion/{{id}}" method="post" autocomplete="off">
+        <input type="text" type="answer" name="answer" id="answer" placeholder="Answer" style="border: 1px solid black;" class="mb-12">
+        <input type="submit">
     </form>
     <a href="/questions/{{id+1}}"><button class="home-button">Next Question</button></a>
     </div>
